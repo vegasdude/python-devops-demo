@@ -1,0 +1,4 @@
+python-devops-demo/
+│
+├── app.py
+└── requirements.txt

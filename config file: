@@ -1,0 +1,3 @@
+- run:
+    name: Deploy to Heroku
+    command: git push heroku main

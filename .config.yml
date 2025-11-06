@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  build-and-test:
+    docker:
+      - image: cimg/python:3.10  # CircleCI’s Python environment
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Run tests
+          command: pytest
+          
+workflows:
+  version: 2
+  test_pipeline:
+    jobs:
+      - build-and-test
